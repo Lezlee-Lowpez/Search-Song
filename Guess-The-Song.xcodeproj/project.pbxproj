@@ -12,6 +12,10 @@
 		6F244D562C9A27AB003D0B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F244D552C9A27AB003D0B3B /* Assets.xcassets */; };
 		6F244D592C9A27AB003D0B3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F244D582C9A27AB003D0B3B /* Preview Assets.xcassets */; };
 		6F244D602C9A3193003D0B3B /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F244D5F2C9A3193003D0B3B /* onBoardingView.swift */; };
+		6F244D622C9A87BE003D0B3B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F244D612C9A87BD003D0B3B /* DataService.swift */; };
+		6F244D642C9A8B70003D0B3B /* SpotifyAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F244D632C9A8B70003D0B3B /* SpotifyAccess.swift */; };
+		6F85FC0E2C9C8D6500446953 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85FC0D2C9C8D6500446953 /* AccessToken.swift */; };
+		6F85FC102C9CBE9700446953 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F85FC0F2C9CBE9700446953 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,12 @@
 		6F244D552C9A27AB003D0B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F244D582C9A27AB003D0B3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6F244D5F2C9A3193003D0B3B /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
+		6F244D612C9A87BD003D0B3B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		6F244D632C9A8B70003D0B3B /* SpotifyAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAccess.swift; sourceTree = "<group>"; };
+		6F85FC0B2C9B881000446953 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		6F85FC0C2C9B888800446953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6F85FC0D2C9C8D6500446953 /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		6F85FC0F2C9CBE9700446953 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +63,14 @@
 		6F244D502C9A279F003D0B3B /* Guess-The-Song */ = {
 			isa = PBXGroup;
 			children = (
+				6F85FC0C2C9B888800446953 /* Info.plist */,
 				6F244D512C9A279F003D0B3B /* Guess_The_SongApp.swift */,
 				6F244D532C9A279F003D0B3B /* ContentView.swift */,
+				6F85FC0B2C9B881000446953 /* Config.xcconfig */,
+				6F244D612C9A87BD003D0B3B /* DataService.swift */,
+				6F85FC0F2C9CBE9700446953 /* ListView.swift */,
+				6F244D632C9A8B70003D0B3B /* SpotifyAccess.swift */,
+				6F85FC0D2C9C8D6500446953 /* AccessToken.swift */,
 				6F244D5F2C9A3193003D0B3B /* onBoardingView.swift */,
 				6F244D552C9A27AB003D0B3B /* Assets.xcassets */,
 				6F244D572C9A27AB003D0B3B /* Preview Content */,
@@ -140,9 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F244D642C9A8B70003D0B3B /* SpotifyAccess.swift in Sources */,
 				6F244D602C9A3193003D0B3B /* onBoardingView.swift in Sources */,
 				6F244D542C9A279F003D0B3B /* ContentView.swift in Sources */,
+				6F85FC102C9CBE9700446953 /* ListView.swift in Sources */,
 				6F244D522C9A279F003D0B3B /* Guess_The_SongApp.swift in Sources */,
+				6F244D622C9A87BE003D0B3B /* DataService.swift in Sources */,
+				6F85FC0E2C9C8D6500446953 /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +171,7 @@
 /* Begin XCBuildConfiguration section */
 		6F244D5A2C9A27AB003D0B3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F85FC0B2C9B881000446953 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -214,6 +235,7 @@
 		};
 		6F244D5B2C9A27AB003D0B3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F85FC0B2C9B881000446953 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -279,6 +301,7 @@
 				DEVELOPMENT_TEAM = 352XRT73WP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Guess-The-Song/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -308,6 +331,7 @@
 				DEVELOPMENT_TEAM = 352XRT73WP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Guess-The-Song/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

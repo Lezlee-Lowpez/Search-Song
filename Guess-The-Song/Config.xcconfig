@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  Guess-The-Song
+//
+//  Created by Lesley Lopez on 9/18/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+CLIENT_SECRET = 153ce0e134df4f928dc018177c2fd14e
+CLIENT_ID = 2e5535e8dbd845dda042b2d0fe164d22
