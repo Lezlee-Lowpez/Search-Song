@@ -25,6 +25,7 @@ struct ContentView: View {
                     .font(.title)
                     .bold()
                     .foregroundStyle(.white)
+                    .padding(.top,50)
                 
                 
                 HStack {
@@ -36,8 +37,11 @@ struct ContentView: View {
                        //code
                     }, label: {
                         Text("Go")
+                            .frame(width: 40,height: 40)
                             .background(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 15.0))
                     })
+                    .padding(.trailing)
                 }
                 
                 ListView()

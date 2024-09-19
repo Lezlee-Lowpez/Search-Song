@@ -39,4 +39,15 @@ struct Track : Codable, Identifiable {
         var popularity: Int
         var preview_url: String?
         var uri: String
+        var album: Album
+}
+
+struct Album : Codable {
+    var images: [AlbumImage]
+}
+
+struct AlbumImage: Codable {
+    var url: String
+    var height: Int
+    var width: Int
 }

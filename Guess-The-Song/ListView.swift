@@ -18,7 +18,7 @@ struct ListView: View {
                 HStack{
                     Text(track.name)
                     Spacer()
-                    Text("preview \(track.preview_url!)")
+                    ImageView(url: track.album.images.first?.url ?? "")
                 }
                
                 

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct onBoardingView: View {
+    
+    @Environment(\.dismiss) var dismiss
     @State var selectedViewIndex = 0
     var body: some View {
         
@@ -61,9 +63,9 @@ struct onBoardingView: View {
                     
                     Spacer()
                     Button(action: {
-                        withAnimation {
-                            selectedViewIndex=0
-                        }
+                    
+                            dismiss()
+                        
                         
                     }, label: {
                         Text("back")
