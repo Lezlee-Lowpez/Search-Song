@@ -9,9 +9,9 @@ import Foundation
 
 struct DataService {
     
-    var access_token = "BQB0DLHjaYEXKDqUrdP_GV319BKOW1NH361WjcnLS_k-pzx_lGRupPhQ6ZZk2AaqRrOyp1Dlix7MrKJZ_qErBezJ159Vd6QMQQAiMsp3R8ncZnZRPH0"
+//    var access_token = "BQB0DLHjaYEXKDqUrdP_GV319BKOW1NH361WjcnLS_k-pzx_lGRupPhQ6ZZk2AaqRrOyp1Dlix7MrKJZ_qErBezJ159Vd6QMQQAiMsp3R8ncZnZRPH0"
     
-    func getMusic() async {
+    func getMusic(access_token: String) async -> [Track] {
         
         //api key
         
@@ -33,7 +33,7 @@ struct DataService {
                 let decoder = JSONDecoder()
                 
                 let results = try decoder.decode(TrackResponse.self, from: data)
-                print(results.tracks)
+                return results.tracks.items ?? []
                 
                 
                 
@@ -42,6 +42,7 @@ struct DataService {
             }
            
         }
-       
+        
+       return []
     }
 }

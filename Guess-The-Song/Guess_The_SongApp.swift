@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Guess_The_SongApp: App {
+    @State var searchModel = SearchViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(searchModel)
         }
     }
 }

@@ -12,13 +12,13 @@ struct SpotifyAccess {
     //this is where im going to do OAuth
     //get an access token
     
-    func getAccessToken() async {
+    func getAccessToken() async -> String{
         
         guard let client_id = Bundle.main.infoDictionary?["CLIENT_ID"] as? String,
               let client_secret = Bundle.main.infoDictionary?["CLIENT_SECRET"] as? String else {
             
             print("Missing client id or client secret in info.plist")
-            return
+            return ""
         }
         
         if let url = URL(string: "https://accounts.spotify.com/api/token"){
@@ -26,7 +26,7 @@ struct SpotifyAccess {
             let credentials = "\(client_id):\(client_secret)"
             guard let encodedCredentials = credentials.data(using: .utf8)?.base64EncodedString() else {
                 print("Failed to encode credentials")
-                return
+                return ""
             }
             
             
@@ -46,8 +46,8 @@ struct SpotifyAccess {
                 //decode it
                 let decoder = JSONDecoder()
                 let token = try decoder.decode(AccessToken.self, from: data)
-                
-                print("This is what i finally need: \(token)")
+                print(token.access_token)
+                return token.access_token
                 
             } catch {
                 print(error)
@@ -56,6 +56,6 @@ struct SpotifyAccess {
            
             
         }
-
+        return ""
     }
 }

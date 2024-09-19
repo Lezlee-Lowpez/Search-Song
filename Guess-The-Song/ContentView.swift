@@ -10,8 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     @State var song = ""
-    var spotify = SpotifyAccess()
-    var dataService = DataService()
+    @EnvironmentObject var searchModel: SearchViewModel
+    
+    
     var body: some View {
         
         ZStack{
@@ -39,7 +40,7 @@ struct ContentView: View {
                     })
                 }
                 
-//               ListView()
+                ListView()
                 
                 
                 
@@ -47,10 +48,7 @@ struct ContentView: View {
         }
         .ignoresSafeArea()
         .onAppear {
-            Task {
-//                await spotify.getAccessToken()
-                await dataService.getMusic()
-            }
+            searchModel.callForData()
         }
     
     }
