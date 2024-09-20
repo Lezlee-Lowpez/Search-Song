@@ -9,15 +9,14 @@ import Foundation
 
 struct DataService {
     
-//    var access_token = "BQB0DLHjaYEXKDqUrdP_GV319BKOW1NH361WjcnLS_k-pzx_lGRupPhQ6ZZk2AaqRrOyp1Dlix7MrKJZ_qErBezJ159Vd6QMQQAiMsp3R8ncZnZRPH0"
+
     
-    func getMusic(access_token: String) async -> [Track] {
+    func getMusic(access_token: String, artist: String) async -> [Track] {
         
-        //api key
+        // turn artist string into correct format if theres spaces
+        var encodedQuery = artist.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
-        //url
-        
-        if let url = URL(string: "https://api.spotify.com/v1/search?q=bad%20bunny&type=track") {
+        if let url = URL(string: "https://api.spotify.com/v1/search?q=\(encodedQuery ?? "test")&type=track") {
             
             
             //url request

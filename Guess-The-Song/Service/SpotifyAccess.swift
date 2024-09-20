@@ -46,7 +46,7 @@ struct SpotifyAccess {
                 //decode it
                 let decoder = JSONDecoder()
                 let token = try decoder.decode(AccessToken.self, from: data)
-                print(token.access_token)
+//                print(token.access_token)
                 return token.access_token
                 
             } catch {

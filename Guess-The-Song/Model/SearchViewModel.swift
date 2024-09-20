@@ -15,9 +15,9 @@ class SearchViewModel: ObservableObject {
     var spotify = SpotifyAccess()
     var dataService = DataService()
     
-    func callForData() {
+    func callForData(artist:String) {
         Task {
-            let fetchedTracks = await dataService.getMusic(access_token: spotify.getAccessToken())
+            let fetchedTracks = await dataService.getMusic(access_token: spotify.getAccessToken(), artist: artist)
             
             DispatchQueue.main.async {
                 self.tracks = fetchedTracks

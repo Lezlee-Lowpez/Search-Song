@@ -69,15 +69,10 @@
 			children = (
 				6F85FC0C2C9B888800446953 /* Info.plist */,
 				6F244D512C9A279F003D0B3B /* Guess_The_SongApp.swift */,
-				6F244D532C9A279F003D0B3B /* ContentView.swift */,
-				6F85FC112C9CC7AA00446953 /* SearchViewModel.swift */,
 				6F85FC0B2C9B881000446953 /* Config.xcconfig */,
-				6F244D612C9A87BD003D0B3B /* DataService.swift */,
-				6F85FC0F2C9CBE9700446953 /* ListView.swift */,
-				6F57BBA42C9CE1E200BAC8A9 /* ImageView.swift */,
-				6F244D632C9A8B70003D0B3B /* SpotifyAccess.swift */,
-				6F85FC0D2C9C8D6500446953 /* AccessToken.swift */,
-				6F244D5F2C9A3193003D0B3B /* onBoardingView.swift */,
+				6F57BBA62C9CEF0C00BAC8A9 /* Service */,
+				6F57BBA72C9CEF3800BAC8A9 /* Model */,
+				6F57BBA82C9CEF6500BAC8A9 /* Views */,
 				6F244D552C9A27AB003D0B3B /* Assets.xcassets */,
 				6F244D572C9A27AB003D0B3B /* Preview Content */,
 			);
@@ -90,6 +85,35 @@
 				6F244D582C9A27AB003D0B3B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6F57BBA62C9CEF0C00BAC8A9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6F244D632C9A8B70003D0B3B /* SpotifyAccess.swift */,
+				6F244D612C9A87BD003D0B3B /* DataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6F57BBA72C9CEF3800BAC8A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6F85FC0D2C9C8D6500446953 /* AccessToken.swift */,
+				6F85FC112C9CC7AA00446953 /* SearchViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6F57BBA82C9CEF6500BAC8A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F244D5F2C9A3193003D0B3B /* onBoardingView.swift */,
+				6F244D532C9A279F003D0B3B /* ContentView.swift */,
+				6F85FC0F2C9CBE9700446953 /* ListView.swift */,
+				6F57BBA42C9CE1E200BAC8A9 /* ImageView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

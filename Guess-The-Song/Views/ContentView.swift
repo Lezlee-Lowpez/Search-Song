@@ -34,7 +34,7 @@ struct ContentView: View {
                     .padding(.horizontal)
                     
                     Button(action: {
-                       //code
+                        searchModel.callForData(artist: song)
                     }, label: {
                         Text("Go")
                             .frame(width: 40,height: 40)
@@ -52,7 +52,7 @@ struct ContentView: View {
         }
         .ignoresSafeArea()
         .onAppear {
-            searchModel.callForData()
+            searchModel.callForData(artist: "bad bunny")
         }
     
     }
