@@ -10,16 +10,34 @@ import SwiftUI
 struct ListView: View {
     
     @EnvironmentObject var searchModel : SearchViewModel
+    @Binding var previewOn: Bool
     
     var body: some View {
         
+        
+        
+        
         List {
             ForEach(searchModel.tracks) { track in
-                HStack{
-                    Text(track.name)
-                    Spacer()
-                    ImageView(url: track.album.images.first?.url ?? "")
-                }
+                
+                
+                    HStack{
+                        Text(track.name)
+                            .frame(maxWidth:90, alignment: .leading)
+                            .lineLimit(2)
+                            .truncationMode(.tail)
+                        Spacer()
+                        ImageView(url: track.album.images.first?.url ?? "")
+                        
+                        if previewOn, let previewUrl = track.preview_url {
+                            AudioPlayerView(previewUrl: previewUrl)
+                        }
+                        
+                    }
+                
+                
+                
+               
                
                 
             }
@@ -28,5 +46,5 @@ struct ListView: View {
 }
 
 #Preview {
-    ListView()
+    ListView(previewOn: .constant(true))
 }

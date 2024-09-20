@@ -44,6 +44,7 @@ struct Track : Codable, Identifiable {
 
 struct Album : Codable {
     var images: [AlbumImage]
+    var name: String
 }
 
 struct AlbumImage: Codable {

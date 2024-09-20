@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State var song = ""
     @EnvironmentObject var searchModel: SearchViewModel
-    
+    @State var previewOn = false
     
     var body: some View {
         
@@ -44,7 +44,20 @@ struct ContentView: View {
                     .padding(.trailing)
                 }
                 
-                ListView()
+                VStack(spacing: 0) {
+                    Toggle("With Preview", isOn: $previewOn)
+                }
+                .bold()
+                .foregroundStyle(.white)
+                .padding(10)
+                .background(Color(red: 115/255, green: 221/255, blue: 128/255))
+                .clipShape(RoundedRectangle(cornerRadius: 15.0))
+                .padding(.horizontal)
+                
+                
+                
+                ListView(previewOn: $previewOn)
+                    .environmentObject(searchModel)
                 
                 
                 

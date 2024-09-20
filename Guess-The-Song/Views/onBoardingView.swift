@@ -29,7 +29,7 @@ struct onBoardingView: View {
                     Spacer()
                     Image("song")
                         .padding(.bottom, 30)
-                    Text("This app lets you search for a specific song? Idk what is does yet")
+                    Text(" Find your jam, preview it, and let the music take over. 🎶💫")
                         .padding(.vertical)
                     
                     Spacer()
@@ -58,7 +58,7 @@ struct onBoardingView: View {
                         .padding(.leading, 10)
                         .padding(.bottom)
                         
-                    Text("This app lets you search for a specific song? Idk what is does yet")
+                    Text("Just need the song name? No problem! You can toggle the preview off and on.")
                         .padding(.vertical)
                     
                     Spacer()
